@@ -1,0 +1,60 @@
+.timer {
+	font-family: Arial, sans-serif;
+	display: flex;
+	text-align:center;
+	& > div {
+		div {
+			text-transform: uppercase;
+			font-size: .75em;
+			padding: 5px 0;
+			color: rgba(0,0,0,.4);
+		}
+	}
+	span {
+		position: relative;
+		font-size: 5em;
+		padding: 10px;
+		&:after {
+			position:absolute;
+			top: 50%;
+			left: 100%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.days {
+		background: black;
+		color: white;
+		padding: 0 20px;
+		border-radius: 10px;
+		&.last {
+			background: red;
+		}
+	}
+	.hours {
+		&:after {
+			content: ":";
+			font-size: .5em;
+		}
+	}
+	.mins {
+		&:after {
+			content:"";
+		}
+	}
+	.hours,
+	.mins {
+		&.last {
+			color: red;
+		}
+	}
+	.secs {
+		display: block;
+		border-radius: 5px;
+		background: rgba(0,0,0,.5);
+		font-size: 1.2em;
+		color: white;
+		&.last {
+			background:red;
+		}
+	}
+}

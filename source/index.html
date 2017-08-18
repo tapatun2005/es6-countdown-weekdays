@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div id="timer"></div>
+<div id="timer2">
+	<span class="days"></span>
+	<span class="hours"></span>
+	<span class="mins"></span>
+	<span class="secs"></span>
+</div>
+	
+<script src="js/countdowndays.js"></script>
+<script>
+	// var selector = document.querySelector('body');
+	var selector = document.getElementById('timer');
+	var selector2 = document.getElementById('timer2');
+
+	var timer = new CountdownWeekDays(selector, [
+			{day: 5, time: "15:29"}
+		],
+		);
+	var timer2 = new CountdownWeekDays(selector2, [
+			{day: "Saturday", time: "15:29"}
+		],
+		);
+</script>
+
+</body>
+</html>
